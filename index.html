@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    .days {
+        width: 98.5%;
+        height: 250px;
+        margin: auto;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.09);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.4px);
+        -webkit-backdrop-filter: blur(2.4px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+
+      }
+      .days .one-day p:first-child {
+        text-transform: capitalize;
+        font-weight: bolder;
+        font-family: rubik;
+        max-width: 10%;
+      }
+      .days .one-day i:first-child {
+        font-size: 1.4rem;
+      }
+      .days .one-day i:nth-child(3),
+      i:nth-child(4) {
+        color: #ffd700;
+        font-size: 1.4rem;
+      }
+      .days .one-day {
+        display: flex;
+        justify-content: space-between;
+      }
+      .days {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        overflow-y: auto;
+      }
+      .days .one-day div {
+        display: flex;
+        gap: 4px;
+        justify-content: center;
+        align-items: center;
+      }
+      /*------arrows---------*/
+
+      section:last-child {
+        width: 98.5%;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.09);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.4px);
+        -webkit-backdrop-filter: blur(2.4px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        display: flex;
+        justify-content: space-around;
+
+        padding: 1.8rem 0 2.5rem 0;
+      }
+      section:last-child .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      section:last-child div i {
+        color: #ffd700;
+        margin: auto;
+        font-size: 4rem;
+      }
+      section:last-child div {
+        margin-top: 1rem;
+      }
+      section:last-child p {
+        font-size: larger;
+        font-weight: bolder;
+      }
+      section:last-child .left div i:last-child {
+        color: rgb(159, 31, 31);
+        position: relative;
+        right: 53%;
+        top: 72%;
+      }
+      section:last-child .right div i:last-child {
+        color: whitesmoke;
+
+        position: relative;
+        right: 50%;
+        bottom:25%;
+      }
+</style>
+</head>
+<body >
+    <div class="container">
+        <header>
+            <div class="left">
+                <span id="now">°</span>
+                <span>Oujda</span>
+            </div>
+            <div class="right">
+              <i class="fa fa-sun"></i>
+
+              <!-- <img  id="img_header"
+              src="" alt=""> -->
+           </div>
+        </header>
+        <div class="today">
+            <p>  <span id="max1"></span> /   <span id="min1"></span>  Feels Like <span id="feels like"></span></p>
+            <span id="jours"></span>,<span id="timee"></span>
+        </div>
+        <section id="cont1">
+            <div>
+                <span>20:00</span>
+                <i class="fa fa-sun"></i>
+                <span>21°</span>
+                <div>
+                    <i class="fa fa-droplet" style="color: rgb(67, 129, 227);"></i>
+                    <span>0%</span>
+                </div>
+            </div>
+            <div>
+                <span>20:00</span>
+                <i class="fa fa-sun"></i>
+                <span>21°</span>
+                <div>
+                    <i class="fa fa-droplet" style="color: rgb(67, 129, 227);" ></i>
+                    <span>0%</span>
+                </div>
+            </div>
+           
+            <div>
+                <span>20:00</span>
+                <i class="fa fa-sun"></i>
+                <span>21°</span>
+                <div>
+                    <i class="fa fa-droplet"></i>
+                    <span>0%</span>
+                </div>
+            </div>
+            <div>
+              <span>20:00</span>
+              <i class="fa fa-sun"></i>
+              <span>21°</span>
+              <div>
+                  <i class="fa fa-droplet"></i>
+                  <span>0%</span>
+              </div>
+          </div> <div>
+            <span>20:00</span>
+            <i class="fa fa-sun"></i>
+            <span>21°</span>
+            <div>
+                <i class="fa fa-droplet"></i>
+                <span>0%</span>
+            </div>
+              </div> <div>
+                <span>20:00</span>
+                <i class="fa fa-sun"></i>
+                <span>21°</span>
+                <div>
+                    <i class="fa fa-droplet"></i>
+                    <span>0%</span>
+                </div>
+            </div> <div>
+              <span>20:00</span>
+              <i class="fa fa-sun"></i>
+              <span>21°</span>
+              <div>
+                  <i class="fa fa-droplet"></i>
+                  <span>0%</span>
+                </div>
+            </div> <div>
+              <span>20:00</span>
+              <i class="fa fa-sun"></i>
+              <span>21°</span>
+              <div>
+                  <i class="fa fa-droplet"></i>
+                  <span>0%</span>
+              </div>
+          </div> <div>
+                  <span>20:00</span>
+                <i class="fa fa-sun"></i>
+                <span>21°</span>
+                <div>
+                    <i class="fa fa-droplet"></i>
+                    <span>0%</span>
+                </div>
+            </div> <div>
+              <span>20:00</span>
+              <i class="fa fa-sun"></i>
+              <span>21°</span>
+              <div>
+                  <i class="fa fa-droplet"></i>
+                  <span>0%</span>
+              </div>
+            </div>
+            <div>
+                <span>20:00</span>
+                <i class="fa fa-sun"></i>
+                <span>21°</span>
+                <div>
+                    <i class="fa fa-droplet"></i>
+                    <span>0%</span>
+                </div>
+            </div>
+            <div>
+                <span>20:00</span>
+                <i class="fa fa-sun"></i>
+                <span>21°</span>
+                <div>
+                    <i class="fa fa-droplet"></i>
+                    <span>0%</span>
+                </div>
+            </div>
+            <div>
+                <span>20:00</span>
+                <i class="fa fa-sun"></i>
+                <span>21°</span>
+                <div>
+                    <i class="fa fa-droplet"></i>
+                    <span>0%</span>
+                </div>
+            </div>
+            <div>
+                <span>20:00</span>
+                <i class="fa fa-sun"></i>
+                <span>21°</span>
+                <div>
+                    <i class="fa fa-droplet"></i>
+                    <span>0%</span>
+                </div>
+            </div>
+        </section>
+    
+
+
+
+        <div class="days">
+            <div class="one-day">
+                <p id="day1">today</p>
+                <div>
+                    <i class="fa-solid fa-droplet"> </i>
+                    <span id="percipitation1">0 </span> <span>%</span>
+                </div>
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                    <p id="permax1">21°</p>
+                    <p id="permin1">14°</p>
+            </div>
+            <div class="one-day">
+              <p id="day2">sunday</p>
+              <div>
+                <i class="fa-solid fa-droplet"> </i>
+                <span id="per2">0 </span> <span>%</span>     
+                       </div>
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+              <p id="permax2">21°</p>
+              <p id="permin2">14°</p>
+            </div>
+            <div class="one-day">
+              <p id="day3">monday</p>
+              <div>
+                <i class="fa-solid fa-droplet"> </i>
+                <span id="per3">0 </span> <span>%</span>
+              </div>
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+              <p id="permax3">21°</p>
+
+              <p id="permin3">14°</p>
+            </div>
+            <div class="one-day">
+              <p id="day4">tuesd</p>
+              <div>
+                <i class="fa-solid fa-droplet"> </i>
+                <span id="per3">0 </span> <span>%</span>
+              </div>
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+              <p id="permax4">21°</p>
+
+              <p id="permin4">14°</p>
+            </div>
+            <div class="one-day">
+              <p id="day5">today</p>
+              <div>
+                <i class="fa-solid fa-droplet"> </i>
+                <span id="per4">0 </span> <span>%</span>
+              </div>
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+              <p id="permax5">21°</p>
+
+              <p id="permin5">14°</p>
+            </div>
+            <div class="one-day">
+              <p id="day6">today</p>
+              <div>
+                <i class="fa-solid fa-droplet"> </i>
+                <span id="per5">0 </span> <span>%</span>
+              </div>
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+              <p id="permax6">21°</p>
+              
+              <p id="permin6">14°</p>
+            </div>
+            <div class="one-day">
+              <p id="day7">today</p>
+              <div>
+                <i class="fa-solid fa-droplet"> </i>
+                <span id="per6">0 </span> <span>%</span>
+              </div>
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+              <p id="permax7">21°</p>
+
+              <p id="permin7">14°</p>
+            </div>
+          </div>
+          <section>
+            <div class="left">
+              <p>Sunrise</p>
+              <p id="sunrise1">07:38</p>
+              <i class="fas fa-sun"></i>
+                <i class="fa-solid fa-arrow-down"></i>
+              <div>
+                
+              </div>
+            </div>
+            <div class="right">
+              <p>Sunset</p>
+              <p id="sunset1">18</p><i class="fas fa-sun"></i>
+                <i class="fa-solid fa-arrow-up"></i>
+              <div>
+                
+              </div>
+            </div>
+          </section>
+    
+    </div>
+    
+    <script src="meteo.js"></script>
+</body>
+</html>
